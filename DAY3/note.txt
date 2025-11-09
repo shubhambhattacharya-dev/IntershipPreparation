@@ -1,0 +1,25 @@
+today we have two tasks:
+
+1.we have to build a HTTP server without express 
+2."/"--hello shubham
+3"/health"-:status:ok
+4."/time"-current time 
+
+but with some addtion taks  - log "url"+method+time into log.txt.
+
+2.one is -🪖 Your Task (10 minutes)
+
+Implement a function:
+
+Fetch user from DB (simulate with setTimeout 1s)
+
+Fetch orders (simulate with setTimeout 0.5s)
+
+Print: "User + orders loaded"
+
+Output example:
+
+Start loading
+User loaded
+Orders loaded
+All data ready

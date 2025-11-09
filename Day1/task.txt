@@ -1,0 +1,15 @@
+write short answer :
+
+1.Node.js-Node.js is a runtime enviroment for js . Its use chrome's V8 engine.V8 engine written in c/c++.
+
+2.V8 Engine-V8 Engine use in browser to excute js in browser.
+
+3.Node.js runtime - beause you use in you local system. in early days js run only in brower by useing V8 engine. Node.js build for local use of js and then envolve js now using in both frontend and backend. node.js used to build - cmd, vs code , routers,server and many more.
+
+4.NPM - Stand for Node package manager . its like a tool library , where all tools are avavilable . npm init -y and use your tools .  after the initallize npm you get a file name package.json where you see your project's dependecies ,tools,main and many more.
+
+5.commonJs(require) and ES module (import)- commonJs its old way use of import tools and use . ES module - ES6 its really useful reduce code ,erusablilty , increase code understanding and more .
+you change it to as your preperanses - you need fist package.json - use npm init -y 
+
+then use - "type":"module"/"common"
+
