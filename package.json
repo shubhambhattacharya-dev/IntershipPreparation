@@ -1,0 +1,21 @@
+{
+  "name": "intershippreparation",
+  "version": "1.0.0",
+  "description": "This is for backend development. Here, I upload all my practice session classes, what I learned today, and more.",
+  "main": "rivision.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhambhattacharya-dev/IntershipPreparation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhambhattacharya-dev/IntershipPreparation/issues"
+  },
+  "homepage": "https://github.com/shubhambhattacharya-dev/IntershipPreparation#readme"
+}
