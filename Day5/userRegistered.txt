@@ -1,0 +1,54 @@
+Component plan (micro-steps)
+
+1.Create an EventEmitter instance (import + instance + purpose).
+
+2.Add a safe emitSafe wrapper + explain why.
+
+3.Create a minimal listener skeleton (validation + try/catch).
+
+4.Build sendFakeEmail as a Promise-based function (async).
+
+5.Connect: emit userRegistered and see the flow.
+
+6.Add retry/demo queue + notes about production replacements.
+
+Below I’ll do 1 + 2 (deep), then 3 (deep) in this same message so you can implement quickly.
+
+           //component 1- 
+
+Backend mein event ka matlab hota hai:
+
+“Koi kaam hone ke baad ek signal bhejna, taaki doosra kaam automatically start ho jaye.”
+
+Example:
+
+User signup hota hai → backend ek “userRegistered” event fire karega
+
+Listener bolega:
+
+“Okay, ab main email bhej raha hoon”
+
+“Main logging kar raha hoon”
+
+“Main analytics update kar raha hoon”
+
+Yeh sab chize alag-alag listeners handle karte hain.
+
+Iska fayda?
+
+Signup code clean rahta hai
+
+Email sending decoupled hota hai
+
+Future mein new listeners add kar sakte ho without touching signup function
+
+Yeh real backend architecture hota hai.
+
+simple mai - event emiiter ek signal system hai , doll bell type 
+agar alert dena hai like 'kuch hua hai ' then - on ()
+
+   -event.on(event depen kar ta hai ki event ke varibale ka kiya naamm hai).on('eventNaam,(inbuilt call back add kar skte hai)=>{
+
+   })
+
+   -for listen ke liye event.emit('event ka naam')
