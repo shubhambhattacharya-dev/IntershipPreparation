@@ -1,0 +1,256 @@
+
+
+---
+
+# 📘 **🔥 NODE.JS REVISION NOTES (Everything You Learned Till Now)**
+
+---
+
+# #️⃣ **1. Event Loop — Full Summary**
+
+### ✔ Event loop JS ko asynchronous banata hai
+
+### ✔ JS single-threaded hota hai but async libuv se hota hai
+
+### ✔ Event loop ke 6 phases hote hain:
+
+1. Timers (setTimeout, setInterval)
+2. Pending callbacks
+3. Idle/prepare
+4. Poll
+5. **Check (setImmediate)**
+6. Close callbacks
+
+---
+
+# #️⃣ **2. Microtasks (Highest Priority)**
+
+### Microtask Queue:
+
+* **process.nextTick()** (Node special)
+* Promises `.then()`
+
+### Order:
+
+```
+Sync Code
+→ process.nextTick()
+→ Promises
+→ Event loop phases
+```
+
+---
+
+# #️⃣ **3. process.nextTick()**
+
+### ✔ Microtask queue
+
+### ✔ Highest priority
+
+### ✔ Event loop se pehle chalta hai
+
+### ✔ Danger: **Microtask starvation** (infinite loop)
+
+**Example of dangerous infinite loop:**
+
+```js
+let i = 0;
+function repeat() {
+    i++;
+    console.log("Tick:", i);
+    process.nextTick(repeat);  // event loop never starts
+}
+repeat();
+```
+
+### Use Cases:
+
+* Validation
+* Immediate callbacks
+* Internal Node modules
+* Promise-like behavior
+
+---
+
+# #️⃣ **4. setImmediate()**
+
+### ✔ Check phase me chalata hai
+
+### ✔ nextTick se low priority
+
+### ✔ nextTick dangerous → setImmediate safe
+
+### ✔ Heavy tasks ko next cycle me shift karta hai
+
+### ✔ I/O ke baad run hota hai
+
+**Typical order:**
+
+```
+nextTick > setImmediate
+```
+
+---
+
+# #️⃣ **5. setTimeout(0) vs setImmediate()**
+
+### ✔ setImmediate → next cycle (CHECK phase)
+
+### ✔ setTimeout(0) → Timers phase (slightly later)
+
+Most cases:
+
+```
+setImmediate()
+setTimeout(0)
+```
+
+---
+
+# #️⃣ **6. Promise — Ultra Summary**
+
+### States:
+
+* Pending
+* Fulfilled (resolve)
+* Rejected (reject)
+
+### Properties:
+
+✔ Promise state **immutable**
+✔ .then() & .catch()
+✔ Promise chain new promise return karta
+
+**Syntax:**
+
+```js
+new Promise((resolve, reject) => {...})
+  .then(...)
+  .catch(...)
+```
+
+---
+
+# #️⃣ **7. Async / Await**
+
+### ✔ async function ALWAYS returns a Promise
+
+### ✔ await = Promise ka result ruk ke deta hai
+
+### ✔ try/catch for error handling
+
+**Example:**
+
+```js
+async function test() {
+  const data = await fetch(...);
+}
+```
+
+Async/await inside becomes:
+
+```
+promise.then(...)
+```
+
+---
+
+# #️⃣ **8. Stream — Full Summary**
+
+### Stream = Data ko chunk-by-chunk read/write karna
+
+### Types:
+
+* Readable
+* Writable
+* Duplex (read + write)
+* Transform (modify)
+
+### Why use Streams?
+
+✔ Memory efficient
+✔ Fast
+✔ Scalable
+✔ Large files handle karta hai
+✔ File upload/download
+✔ Video/audio streaming
+
+**Example:**
+
+```js
+fs.createReadStream("big.txt").on("data", chunk => {
+    console.log(chunk.length);
+});
+```
+
+---
+
+# #️⃣ **9. Microtask Starvation (VERY IMPORTANT)**
+
+Jab nextTick or promise repeatedly schedule ho:
+
+```
+microtask → microtask → microtask
+```
+
+Event loop phases run **Nahi hote** → server freeze.
+
+
+---
+
+# #️⃣ **10. Dog API (Fetch Example)**
+
+**HTML + JS example (async/await):**
+
+```js
+async function getDog() {
+    const res = await fetch("https://dog.ceo/api/breeds/image/random");
+    const data = await res.json();
+    console.log(data.message);
+}
+getDog();
+```
+
+---
+
+# #️⃣ **11. Random Indian Meme API**
+
+**Endpoint:**
+
+```
+https://meme-api.com/gimme/IndianMeyMeys
+```
+
+**Fetch Example:**
+
+```js
+async function getMeme() {
+    const res = await fetch("https://meme-api.com/gimme/IndianMeyMeys");
+    const data = await res.json();
+    console.log(data.url);
+}
+```
+
+---
+
+# #️⃣ **12. nextTick vs setImmediate (Final Summary)**
+
+| Feature  | nextTick                          | setImmediate             |
+| -------- | --------------------------------- | ------------------------ |
+| Queue    | Microtask                         | Check phase              |
+| Runs     | Current phase ke immediately baad | Next event loop cycle    |
+| Priority | Highest                           | Medium                   |
+| Danger   | Freeze / starvation               | Safe                     |
+| Use Case | Validation, tiny tasks            | Heavy tasks, I/O ke baad |
+
+---
+
+# 🎯 **MASTER 3-LINE SUMMARY (Interview-Perfect)**
+
+> **Node.js single-threaded sync code V8 me chalata hai,
+> async libuv + event loop se hota hai.
+> Microtasks (nextTick, Promises) event loop se pehle run hote hain.
+> Streams large data ko chunks me handle karte hain.**
+
+---
+
