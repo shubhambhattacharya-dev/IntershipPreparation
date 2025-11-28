@@ -1,0 +1,2 @@
+Node.js me do module systems hote hain: CommonJS (require/module.exports) aur ES Modules (import/export).
+CommonJS synchronous aur server-side hota hai, jabki ES Modules modern JavaScript standard hai aur asynchronous, browser-compatible, aur top-level await support karta hai.
