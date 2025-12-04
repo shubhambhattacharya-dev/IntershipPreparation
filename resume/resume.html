@@ -1,213 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>BusMate – Full Skillset & Architecture</title>
-<style>
-    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.7; }
-    h1,h2,h3 { color: #1A237E; margin-top: 30px; }
-    .section { margin-bottom: 35px; }
-    .card { background: #F4F6FF; padding: 15px; border-left: 5px solid #1A237E; margin-top: 10px; }
-    ul { margin-left: 25px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Bhattacharya - Backend Developer Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 0;
+        }
+        .title {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .contact {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 18px;
+            color: #007bff;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .skills-grid ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .project {
+            margin-bottom: 15px;
+        }
+        .project h3 {
+            font-size: 16px;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+        .project-tech {
+            font-style: italic;
+            color: #666;
+        }
+        .project-desc {
+            margin: 5px 0;
+        }
+        .why-me ul {
+            padding-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="header">
+        <h1 class="name">Shubham Bhattacharya</h1>
+        <p class="title">Backend Developer — Node.js • Express • MongoDB • REST APIs • MERN Stack</p>
+        <p class="contact">
+            Vadodara, Gujarat • +91 9155252394 • shubh.bhattacharya7@gmail.com<br>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/your-github" target="_blank">GitHub</a>
+        </p>
+    </div>
 
-<h1>🚀 BusMate – MERN + Backend + AI Full Skillset & System Architecture</h1>
-<p>The complete technical stack, skills required, real-time features, and backend architecture for building the BusMate transportation & safety system.</p>
+    <div class="section">
+        <h2>SUMMARY</h2>
+        <p>Backend Developer skilled in Node.js, Express, MongoDB & REST APIs. Experienced in real-time systems (Socket.IO, EventEmitter) & deploying scalable apps on Render with clean code. Proficient in MERN stack. Seeking backend internship for production systems & industry experience.</p>
+    </div>
 
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-grid">
+            <ul>
+                <li><strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT, Middleware, EventEmitter, Socket.IO</li>
+                <li><strong>Database:</strong> MongoDB, Mongoose, PostgreSQL</li>
+                <li><strong>Tools:</strong> Git, GitHub, Postman, Linux, Render, VS Code</li>
+            </ul>
+            <ul>
+                <li><strong>Core:</strong> Authentication, CRUD, Logging, Validation, Debugging, DSA Basics</li>
+                <li><strong>Full-Stack:</strong> MERN (MongoDB, Express, React, Node.js)</li>
+            </ul>
+        </div>
+    </div>
 
-<!-- ------------------------------------------------------------- -->
-<h2>1) ⭐ MERN STACK (Core Skills)</h2>
-<div class="card">
-<h3>MongoDB</h3>
-<ul>
-<li>CRUD operations, Collections, Indexes</li>
-<li>Mongoose Schema + Validators</li>
-<li>Aggregation pipeline ($match, $group, $lookup)</li>
-<li>Relationships (1–N, N–N)</li>
-<li>GeoLocation (lat/long for bus tracking)</li>
-<li>MongoDB Atlas deployment</li>
-</ul>
+    <div class="section">
+        <h2>PROJECT EXPERIENCE</h2>
+        
+        <div class="project">
+            <h3>JustChat — Real-time Chat App</h3>
+            <p class="project-tech"><a href="https://your-live-link.com" target="_blank">Live</a> | <a href="https://github.com/your-repo" target="_blank">GitHub</a></p>
+            <p class="project-tech">Tech: Node.js, Express, MongoDB, Socket.IO</p>
+            <p class="project-desc">Real-time messaging with Socket.IO & EventEmitter event handling</p>
+            <p class="project-desc">JWT auth, chat rooms; optimized WebSockets (latency reduced ~20%)</p>
+        </div>
 
-<h3>Express.js</h3>
-<ul>
-<li>Routing system</li>
-<li>Controller → Service → DB flow</li>
-<li>Error-handling middleware</li>
-<li>CORS, Helmet, Rate Limiting</li>
-<li>JOI/Zod validation</li>
-<li>Multer + Cloudinary file uploads</li>
-</ul>
+        <div class="project">
+            <h3>E-Commerce Backend</h3>
+            <p class="project-tech"><a href="https://your-live-link.com" target="_blank">Live</a> | <a href="https://github.com/your-repo" target="_blank">GitHub</a></p>
+            <p class="project-tech">Tech: Node.js, Express, MongoDB</p>
+            <p class="project-desc">Product CRUD, validations, error handling; JWT user auth</p>
+            <p class="project-desc">Cart/Order APIs with modular REST architecture</p>
+        </div>
 
-<h3>React.js</h3>
-<ul>
-<li>Component architecture</li>
-<li>Hooks: useState, useEffect, useMemo</li>
-<li>Axios API integration</li>
-<li>Zustand for state management</li>
-<li>Tailwind CSS + DaisyUI</li>
-<li>Real-time updates with Socket.io client</li>
-</ul>
+        <div class="project">
+            <h3>GitHub Explorer — Profile Viewer</h3>
+            <p class="project-tech"><a href="https://your-live-link.com" target="_blank">Live</a> | <a href="https://github.com/your-repo" target="_blank">GitHub</a></p>
+            <p class="project-tech">Tech: Node.js, Express, GitHub API, React (MERN)</p>
+            <p class="project-desc">Fetches profiles/repos/followers/activity; caching & error handling</p>
+            <p class="project-desc">Third-party API integration & backend workflow</p>
+        </div>
+    </div>
 
-<h3>Node.js</h3>
-<ul>
-<li>Event loop, Microtasks, Libuv</li>
-<li>fs, path, events, crypto module</li>
-<li>Streams (bus media processing)</li>
-<li>Cluster module, child processes</li>
-<li>Cron jobs (schedule updates)</li>
-</ul>
-</div>
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <p>BCA — Parul University (2022–2025, Graduated) | CGPA: 8.0</p>
+    </div>
 
+    <div class="section">
+        <h2>WHY ME</h2>
+        <ul class="why-me">
+            <li>Strong backend fundamentals; clean, production-ready REST APIs</li>
+            <li>Real deployed projects (not tutorials); fast learner with discipline</li>
+            <li>Grasps real-world constraints (auth, errors, DB structure)</li>
+        </ul>
+    </div>
 
-
-<!-- ------------------------------------------------------------- -->
-<h2>2) ⭐ Backend Engineering Skills (Required for BusMate)</h2>
-<div class="card">
-<ul>
-<li>REST API design</li>
-<li>Clean 6-layer Architecture</li>
-<li>JWT Authentication + Refresh Token</li>
-<li>Role-based access control (User, Driver, Admin)</li>
-<li>Winston + Morgan logging</li>
-<li>Environment variable management</li>
-<li>API versioning</li>
-<li>Redis caching (optional)</li>
-<li>File uploads + media processing</li>
-<li>Deployment: Render, Railway, Vercel</li>
-</ul>
-</div>
-
-
-
-<!-- ------------------------------------------------------------- -->
-<h2>3) ⭐ AI + ML Layer (Optional Premium Features)</h2>
-<div class="card">
-<ul>
-<li>Google Gemini API integration</li>
-<li>OpenAI integration for automation</li>
-<li>AI-based:
-    <ul>
-    <li>Crowd prediction (students/office rush)</li>
-    <li>Traffic prediction</li>
-    <li>Bus delay prediction</li>
-    <li>Route smart suggestions</li>
-    <li>Complaint sentiment classification</li>
-    </ul>
-</li>
-<li>AI moderation for complaints</li>
-</ul>
-</div>
-
-
-
-<!-- ------------------------------------------------------------- -->
-<h2>4) ⭐ Real-Time System (BusMate Core)</h2>
-<div class="card">
-<h3>WebSocket Features</h3>
-<ul>
-<li>Live bus location & movement</li>
-<li>Real-time map marker updates</li>
-<li>Radar system (near stop alerts)</li>
-<li>Delay updates</li>
-<li>Bus status: running/stopped/offline</li>
-</ul>
-
-<h3>Emergency + Safety System</h3>
-<ul>
-<li>One-tap SOS button</li>
-<li>Auto-send details to nearest police/hospital/fire</li>
-<li>Live location sharing to family/trusted contacts</li>
-<li>Women/Men universal safety mode</li>
-<li>Sudden stop detection</li>
-</ul>
-</div>
-
-
-
-<!-- ------------------------------------------------------------- -->
-<h2>5) ⭐ BusMate 6-Layer Backend Architecture</h2>
-<div class="card">
-<ol>
-<li><b>Route Layer</b> – All API endpoints</li>
-<li><b>Controller Layer</b> – Handle requests, validation</li>
-<li><b>Service Layer</b> – Business logic (tracking, alerts)</li>
-<li><b>Data Access Layer</b> – MongoDB queries (BusModel, UserModel)</li>
-<li><b>Utils Layer</b> – JWT, email, SMS, AI functions</li>
-<li><b>Middleware Layer</b> – Auth, error handler, rate limiter</li>
-</ol>
-</div>
-
-
-
-<!-- ------------------------------------------------------------- -->
-<h2>6) ⭐ Database Schema (MongoDB)</h2>
-<div class="card">
-
-<h3>Bus Model</h3>
-<ul>
-<li>busNumber</li>
-<li>plateNumber</li>
-<li>driverId</li>
-<li>route</li>
-<li>liveLocation {lat, long}</li>
-<li>speed</li>
-<li>status</li>
-</ul>
-
-<h3>Driver Model</h3>
-<ul>
-<li>name</li>
-<li>phone</li>
-<li>licenseNumber</li>
-<li>assignedBus</li>
-</ul>
-
-<h3>User Model</h3>
-<ul>
-<li>name</li>
-<li>phone</li>
-<li>role (student/office/general)</li>
-<li>trustedContacts</li>
-<li>gender (for safety mode)</li>
-</ul>
-
-<h3>Complaint Model</h3>
-<ul>
-<li>busId</li>
-<li>userId</li>
-<li>issueType</li>
-<li>description</li>
-<li>status (pending/resolved)</li>
-<li>autoEscalationLevel</li>
-</ul>
-
-</div>
-
-
-
-<!-- ------------------------------------------------------------- -->
-<h2>7) ⭐ Paid Features (Premium Version)</h2>
-<div class="card">
-<ul>
-<li>Passenger-to-passenger chat</li>
-<li>Seat booking engine</li>
-<li>Revenue share model</li>
-<li>Tourist route intelligence</li>
-<li>Integration with state/government bus APIs</li>
-<li>Complaint auto-post to X/Reddit</li>
-<li>Crowd prediction + traffic AI</li>
-</ul>
-</div>
-
-
-
-<!-- ------------------------------------------------------------- -->
-<h2>8) ⭐ Final Summary</h2>
-<div class="card">
-<p>BusMate is a real-time, AI-enabled, safety-first transportation system built with MERN stack, Node.js backend, clean architecture, and advanced features. This project makes the developer internship-ready, job-ready, and startup-ready.</p>
-</div>
-
+    <footer style="text-align: center; font-size: 12px; color: #999; margin-top: 30px;">
+        <p>Excited to contribute to innovative teams as a Backend Developer. Let's connect!</p>
+    </footer>
 </body>
 </html>
