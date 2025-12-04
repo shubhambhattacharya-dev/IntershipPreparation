@@ -1,2 +1,0 @@
-today we will talk about the fs module and stream module and try to understand artitucture building -1.logging artitecture with fs and steam
--2.data processing with fs and stream 
