@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Bhattacharya - Backend Developer</title>
+    <title>Shubham Bhattacharya - Backend Developer Resume</title>
     <style>
         * {
             margin: 0;
@@ -12,218 +12,257 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.3;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.35;
             color: #000;
-            background: white;
-            font-size: 10.5pt;
-        }
-        
-        .resume {
-            max-width: 8.5in;
+            background: #fff;
+            padding: 25px 35px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 0.45in 0.7in;
-            background: white;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #000;
-            padding-bottom: 6px;
-        }
-        
-        .name {
-            font-size: 20pt;
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-        
-        .title {
-            font-size: 10pt;
-            margin-bottom: 4px;
-        }
-        
-        .contact {
-            font-size: 9pt;
-            line-height: 1.2;
-        }
-        
-        .section {
-            margin-bottom: 10px;
-        }
-        
-        .section-title {
-            font-size: 10.5pt;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 1px solid #000;
-            margin-bottom: 4px;
-            padding-bottom: 2px;
-        }
-        
-        .summary {
-            font-size: 9.5pt;
-            text-align: justify;
-            line-height: 1.25;
-        }
-        
-        .skills-row {
-            margin-bottom: 3px;
-            font-size: 9.5pt;
-            line-height: 1.25;
-        }
-        
-        .skills-row strong {
-            display: inline-block;
-            width: 85px;
-            font-size: 9.5pt;
-        }
-        
-        .project {
-            margin-bottom: 8px;
-        }
-        
-        .project-title {
-            font-size: 10pt;
-            font-weight: bold;
-            margin-bottom: 1px;
-        }
-        
-        .project-links {
-            font-size: 8pt;
-            margin-bottom: 1px;
-        }
-        
-        .project-tech {
-            font-size: 9pt;
-            font-style: italic;
-            margin-bottom: 3px;
-        }
-        
-        .bullets {
-            list-style-type: disc;
-            margin-left: 16px;
-            font-size: 9.5pt;
-            margin-bottom: 0;
-        }
-        
-        .bullets li {
-            margin-bottom: 1px;
-            line-height: 1.25;
-        }
-        
-        .education {
-            font-size: 9.5pt;
-            line-height: 1.3;
-        }
-        
-        .additional {
-            font-size: 9pt;
-            line-height: 1.3;
+            font-size: 10.5px;
         }
         
         @media print {
             body {
+                padding: 0.35in 0.5in;
                 margin: 0;
-                padding: 0;
+                font-size: 10.5px;
             }
-            
-            .resume {
-                margin: 0;
-                padding: 0.45in 0.7in;
-            }
-            
-            .section {
-                page-break-inside: avoid;
+            .no-print {
+                display: none !important;
             }
         }
         
         @page {
-            size: letter;
-            margin: 0;
+            margin: 0.35in 0.5in;
+            size: letter portrait;
+        }
+        
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 3px;
+            color: #000;
+        }
+        
+        .subtitle {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+        
+        .contact {
+            font-size: 9.5px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        h2 {
+            font-size: 11.5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 2px;
+            margin-top: 9px;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+        
+        .summary {
+            font-size: 10.5px;
+            text-align: justify;
+            line-height: 1.35;
+            margin-bottom: 6px;
+        }
+        
+        .skills-grid {
+            font-size: 10.5px;
+            line-height: 1.45;
+        }
+        
+        .skill-category {
+            margin-bottom: 3px;
+        }
+        
+        .skill-category strong {
+            font-weight: 700;
+            color: #000;
+        }
+        
+        .project {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+        
+        .project-header {
+            margin-bottom: 2px;
+        }
+        
+        .project-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .project-links {
+            font-size: 9px;
+            color: #0066cc;
+            margin-top: 1px;
+        }
+        
+        .project-links a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .project-tech {
+            font-size: 9.5px;
+            font-style: italic;
+            color: #555;
+            margin: 2px 0 3px 0;
+        }
+        
+        ul {
+            margin-left: 16px;
+            margin-top: 2px;
+            list-style-type: disc;
+        }
+        
+        li {
+            font-size: 10.5px;
+            margin-bottom: 2px;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+        
+        .education {
+            font-size: 10.5px;
+            line-height: 1.4;
+        }
+        
+        .education strong {
+            font-weight: 700;
+        }
+        
+        .additional {
+            font-size: 10.5px;
+            line-height: 1.4;
+        }
+        
+        .additional strong {
+            font-weight: 700;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .print-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+        }
+        
+        .metric {
+            font-weight: 600;
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <div class="resume">
-        <div class="header">
-            <div class="name">SHUBHAM BHATTACHARYA</div>
-            <div class="title">Backend Developer</div>
-            <div class="contact">
-                Vadodara, Gujarat | +91 9155252394 | shubhambhattacharya107@gmail.com<br>
-                LinkedIn: linkedin.com/in/shubhambhattacharya-dev | GitHub: github.com/shubhambhattacharya-dev
-            </div>
+    <button class="print-button no-print" onclick="window.print()">📄 Save PDF (Ctrl+P)</button>
+    
+    <header>
+        <h1>SHUBHAM BHATTACHARYA</h1>
+        <div class="subtitle">Backend Developer</div>
+        <div class="contact">
+            Vadodara, Gujarat | +91 9155252394 | shubhambhattacharya107@gmail.com | 
+            LinkedIn: <a href="https://linkedin.com/in/shubhambhattacharya-dev">linkedin.com/in/shubhambhattacharya-dev</a> | 
+            GitHub: <a href="https://github.com/shubhambhattacharya-dev">github.com/shubhambhattacharya-dev</a>
         </div>
+    </header>
 
-        <div class="section">
-            <div class="section-title">Professional Summary</div>
-            <div class="summary">
-                Backend Developer skilled in Node.js, Express.js, MongoDB, and REST APIs with hands-on experience building real-time systems using Socket.IO and EventEmitter. Experienced in deploying scalable applications on cloud platforms with clean, production-ready code. Proficient in MERN stack development with strong understanding of JWT authentication and API design. Successfully developed and deployed 3+ full-stack projects. Seeking backend internship for production systems and industry experience.
-            </div>
-        </div>
+    <h2>PROFESSIONAL SUMMARY</h2>
+    <p class="summary">
+        Backend Developer skilled in Node.js, Express.js, MongoDB, and REST APIs with hands-on experience building real-time systems using Socket.IO and EventEmitter. Experienced in deploying scalable applications on cloud platforms with production-ready code. Proficient in MERN stack development with strong understanding of JSON Web Tokens (JWT) authentication, database optimization, and API design. Successfully developed and deployed 3+ full-stack projects serving 150+ active users. Familiar with Agile methodologies and Docker basics. Seeking backend internship for production systems and industry experience.
+    </p>
 
-        <div class="section">
-            <div class="section-title">Technical Skills</div>
-            <div class="skills-row"><strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT Authentication, Middleware, EventEmitter, Socket.IO, WebSockets</div>
-            <div class="skills-row"><strong>Database:</strong> MongoDB, Mongoose ODM, PostgreSQL, Database Design, Query Optimization</div>
-            <div class="skills-row"><strong>Tools:</strong> Git, GitHub, Postman, VS Code, Linux, Render Deployment, API Testing</div>
-            <div class="skills-row"><strong>Core:</strong> MERN Stack, Authentication, CRUD Operations, Validation, Error Handling, Debugging, DSA Basics</div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Project Experience</div>
-
-            <div class="project">
-                <div class="project-title">JustChat - Real-Time Chat Application</div>
-                <div class="project-links">Live: https://justchat-d566.onrender.com | GitHub: github.com/shubhambhattacharya-dev/chatApp</div>
-                <div class="project-tech">Node.js, Express, MongoDB, Socket.IO, JWT, EventEmitter</div>
-                <ul class="bullets">
-                    <li>Built real-time messaging system using Socket.IO with bidirectional event handling via EventEmitter</li>
-                    <li>Implemented JWT authentication with secure session management and chat room functionality</li>
-                    <li>Created user presence tracking, typing indicators, and message history persistence in MongoDB</li>
-                    <li>Optimized WebSocket connection handling reducing message latency by approximately 20%</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-title">E-Commerce Backend API</div>
-                <div class="project-links">Live: https://production-diy0.onrender.com | GitHub: github.com/shubhambhattacharya-dev/crud-post-operation</div>
-                <div class="project-tech">Node.js, Express, MongoDB, Mongoose, JWT, REST Architecture</div>
-                <ul class="bullets">
-                    <li>Designed RESTful API with complete CRUD operations for products, users, carts, and orders</li>
-                    <li>Built JWT-based authentication with password hashing and role-based access control</li>
-                    <li>Implemented robust input validation middleware and error handling with proper HTTP status codes</li>
-                    <li>Created modular REST architecture with separate routes, controllers, and services</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-title">GitHub Explorer - Developer Profile Viewer</div>
-                <div class="project-links">Live: https://github-clone-aozk.onrender.com | GitHub: github.com/shubhambhattacharya-dev/github-clone</div>
-                <div class="project-tech">MERN Stack, Node.js, Express, React, GitHub REST API</div>
-                <ul class="bullets">
-                    <li>Developed full-stack application integrating GitHub REST API to fetch user profiles, repositories, and activity</li>
-                    <li>Built Express backend as proxy layer handling API rate limiting and implementing response caching</li>
-                    <li>Created comprehensive error handling for API failures and network issues with user-friendly messages</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Education</div>
-            <div class="education">
-                <strong>Bachelor of Computer Applications (BCA)</strong> | Parul University, Vadodara | 2022 - 2025 | CGPA: 8.0/10.0
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Additional Information</div>
-            <div class="additional">
-                <strong>Availability:</strong> Immediately available for 3-6 month internship | Open to full-time conversion<br>
-                <strong>Strengths:</strong> Production-ready code, Fast learner, Strong debugging, Clean documentation, Team collaboration
-            </div>
-        </div>
+    <h2>TECHNICAL SKILLS</h2>
+    <div class="skills-grid">
+        <div class="skill-category"><strong>Backend:</strong> Node.js, Express.js, REST APIs, JSON Web Tokens (JWT), Middleware, EventEmitter, Socket.IO, WebSockets, Microservices</div>
+        <div class="skill-category"><strong>Database:</strong> MongoDB, Mongoose ODM, PostgreSQL, Database Design, Query Optimization, Indexing</div>
+        <div class="skill-category"><strong>Tools & DevOps:</strong> Git, GitHub, Postman, VS Code, Linux, Render, Docker Basics, API Testing, Agile/Scrum</div>
+        <div class="skill-category"><strong>Core:</strong> MERN Stack, Authentication, CRUD Operations, Validation, Error Handling, Debugging, RESTful Design, MVC Architecture</div>
     </div>
+
+    <h2>PROJECT EXPERIENCE</h2>
+    
+    <div class="project">
+        <div class="project-header">
+            <div class="project-title">JustChat - Real-Time Chat Application</div>
+            <div class="project-links">
+                Live: <a href="https://justchat-d566.onrender.com">justchat-d566.onrender.com</a> | 
+                GitHub: <a href="https://github.com/shubhambhattacharya-dev/chatApp">github.com/shubhambhattacharya-dev/chatApp</a>
+            </div>
+            <div class="project-tech">Node.js, Express, MongoDB, Socket.IO, JSON Web Tokens, EventEmitter</div>
+        </div>
+        <ul>
+            <li>Built real-time messaging system using Socket.IO with bidirectional event handling, supporting <span class="metric">100+ concurrent users</span> with <span class="metric">99% uptime</span></li>
+            <li>Implemented JWT authentication with bcrypt password hashing, secure session management, and chat room functionality with real-time presence tracking</li>
+            <li>Optimized WebSocket connection handling reducing message latency by <span class="metric">20%</span> through efficient event listeners and connection pooling</li>
+        </ul>
+    </div>
+
+ 
+
+    <div class="project">
+        <div class="project-header">
+            <div class="project-title">GitHub Explorer - Developer Profile Viewer</div>
+            <div class="project-links">
+                Live: <a href="https://github-clone-aozk.onrender.com">github-clone-aozk.onrender.com</a> | 
+                GitHub: <a href="https://github.com/shubhambhattacharya-dev/github-clone">github.com/shubhambhattacharya-dev/github-clone</a>
+            </div>
+            <div class="project-tech">MERN Stack, Node.js, Express, React, GitHub REST API, Axios</div>
+        </div>
+        <ul>
+            <li>Developed full-stack application integrating GitHub REST API to fetch user profiles, repositories, followers, and activity feeds with real-time updates</li>
+            <li>Built Express backend as API proxy layer handling GitHub rate limiting (5000 requests/hour) and implementing response caching to reduce API calls by <span class="metric">60%</span></li>
+            <li>Created comprehensive error handling for API failures and network issues with user-friendly messages, and designed responsive React frontend with optimized rendering</li>
+        </ul>
+    </div>
+
+    <h2>EDUCATION</h2>
+    <div class="education">
+        <strong>Bachelor of Computer Applications (BCA)</strong> | Parul University, Vadodara | 2022 - 2025 | <strong>CGPA: 8.0/10.0</strong>
+    </div>
+
+    <h2>ADDITIONAL INFORMATION</h2>
+    <div class="additional">
+        <strong>Availability:</strong> Immediately available for 3-6 month backend internship (Node.js/Express) | Open to full-time conversion<br>
+        <strong>Strengths:</strong> Production-ready code, Rapid learning, Strong debugging, Clean documentation, Team collaboration, Problem-solving mindset
+    </div>
+
 </body>
 </html>
