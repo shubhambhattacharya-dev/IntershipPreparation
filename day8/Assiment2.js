@@ -3,11 +3,10 @@ import express from "express";
 const app = express();
 const port = 3000;
 
-// Global metrics
+
 let totalRequestTime = 0;
 let totalRequests = 0;
 
-// Middleware to calculate request handling time
 app.use((req, res, next) => {
   const startTime = Date.now();
 
@@ -28,15 +27,15 @@ app.use((req, res, next) => {
   next();
 });
 
-// Sample route
+
 app.get("/", (req, res) => {
-  // Simulate some work
+
   setTimeout(() => {
     res.send("Hello from server");
   }, 200);
 });
 
-// Metrics route
+
 app.get("/metrics", (req, res) => {
   const averageTime =
     totalRequests === 0 ? 0 : totalRequestTime / totalRequests;
@@ -47,7 +46,7 @@ app.get("/metrics", (req, res) => {
   });
 });
 
-// Error handler
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({
@@ -56,5 +55,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`http://localhost:${port}`);
 });
