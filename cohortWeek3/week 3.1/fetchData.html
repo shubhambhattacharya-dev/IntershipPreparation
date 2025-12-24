@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FetchData</title>
+</head>
+ 
+<body>
+<script>
+    function getAnimalData(){
+        //animal img random
+        fetch("https://random.dog/woof.json")
+        .then(response=>{
+            console.log(response)
+            return response.json()
+    })
+    .then(data=>{
+        console.log(data);
+        document.getElementById("animalPic").src=data.url;
+    })
+        
+
+    }
+
+ </script>
+    <img id="animalPic" alt="" width="400">
+        <button onclick="getAnimalData()">Fetch data</button>
+    
+   
+</body>
+</html>
