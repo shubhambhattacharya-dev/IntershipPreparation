@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shubham Bhattacharya | Backend Developer</title>
 
   <style>
+    :root {
+      --primary: #1e40af;
+      --accent: #3b82f6;
+      --dark: #111827;
+      --gray: #4b5563;
+      --light: #f3f4f6;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -13,240 +21,234 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #111827;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.35;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.55;
+      padding: 18px;
     }
 
-    .resume {
-      max-width: 850px;
+    .container {
+      max-width: 900px;
       margin: auto;
+      background: #ffffff;
+      padding: 42px 48px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      border-radius: 8px;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
     }
 
     h1 {
-      font-size: 26px;
-      margin-bottom: 3px;
-    }
-
-    h2 {
-      font-size: 15px;
-      margin-top: 14px;
-      margin-bottom: 5px;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 3px;
-    }
-
-    .subtitle {
-      font-size: 13px;
-      color: #2563eb;
-      font-weight: 600;
-    }
-
-    .contact {
-      font-size: 12px;
-      margin-top: 4px;
-      color: #374151;
-    }
-
-    .contact a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    .contact span {
-      margin-right: 10px;
-    }
-
-    p {
-      font-size: 13px;
-      color: #374151;
-      margin: 4px 0;
-    }
-
-    ul {
-      margin: 4px 0 0 16px;
-      padding: 0;
-    }
-
-    li {
-      font-size: 13px;
-      color: #374151;
-      margin-bottom: 4px;
-    }
-
-    .skills-section {
-      margin: 8px 0;
-    }
-
-    .skill-category {
+      font-size: 34px;
+      color: var(--primary);
       margin-bottom: 6px;
     }
 
-    .skill-category strong {
-      font-size: 12px;
-      color: #1f2937;
-      display: inline-block;
-      min-width: 110px;
+    .role {
+      font-size: 17px;
+      color: var(--gray);
+      margin-bottom: 10px;
+      font-weight: 500;
     }
 
-    .skill-category span {
-      font-size: 12px;
-      color: #374151;
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      font-size: 13.5px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 14.5px;
+    }
+
+    ul {
+      margin-left: 20px;
+      font-size: 14.5px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .project {
+      padding-left: 14px;
+      border-left: 3px solid var(--accent);
+      margin-bottom: 26px;
     }
 
     .project-title {
-      font-weight: 600;
-      font-size: 14px;
-      margin-top: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
     }
 
-    .project-meta {
-      font-size: 12px;
-      color: #6b7280;
-      margin-bottom: 3px;
+    .tech {
+      font-size: 13px;
+      color: var(--gray);
+      font-style: italic;
+      margin: 6px 0;
+      display: block;
     }
 
-    .project-links {
-      font-size: 12px;
-      margin-bottom: 3px;
-    }
-
-    .project-links a {
-      color: #2563eb;
+    .links a {
+      color: var(--accent);
+      margin-right: 12px;
       text-decoration: none;
-      margin-right: 10px;
+      font-weight: 500;
+      font-size: 13.5px;
     }
 
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-
-    .footer {
-      margin-top: 16px;
-      font-size: 12px;
-      color: #6b7280;
+    .availability {
+      background: #eff6ff;
+      padding: 14px;
+      border-left: 4px solid var(--accent);
+      font-size: 14.5px;
+      font-weight: 500;
+      border-radius: 4px;
     }
 
     @media print {
       body {
+        background: white;
         padding: 0;
-        margin: 0;
       }
-      .resume {
-        max-width: 100%;
-        padding: 0.5in;
+      .container {
+        box-shadow: none;
+        padding: 18px;
+        border-radius: 0;
       }
       a {
-        color: #111827;
+        color: black;
         text-decoration: none;
-      }
-      @page {
-        margin: 0;
-        size: A4;
       }
     }
   </style>
 </head>
+
 <body>
+<div class="container">
 
-<div class="resume">
-
-  <!-- Header -->
+<header>
   <h1>Shubham Bhattacharya</h1>
-  <div class="subtitle">Backend Developer | Node.js, Express, MongoDB, Socket.IO | MERN Stack</div>
+  <div class="role">Backend Developer (Node.js • Express • MongoDB)</div>
   <div class="contact">
-    <span>Vadodara, Gujarat</span>
+    <span>Vadodara, Gujarat, India</span>
     <span>+91 9155252394</span>
-    <span><a href="mailto:shubhambhattacharya107@gmail.com">shubhambhattacharya107@gmail.com</a></span><br/>
-    <span><a href="https://shubhambhattacharya.dev" target="_blank">shubhambhattacharya.dev</a></span>
-    <span><a href="https://linkedin.com/in/shubhambhattacharya-dev" target="_blank">LinkedIn</a></span>
-    <span><a href="https://github.com/shubhambhattacharya-dev" target="_blank">GitHub</a></span>
+    <span><a href="mailto:shubhambhattacharya107@gmail.com">shubhambhattacharya107@gmail.com</a></span>
+    <span><a href="https://www.linkedin.com/in/shubhambhattadev/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+    <span><a href="https://github.com/shubhambhattacharya-dev" target="_blank" rel="noopener noreferrer">GitHub</a></span>
   </div>
+</header>
 
-  <!-- Summary -->
+<!-- SUMMARY -->
+<section>
   <h2>Professional Summary</h2>
   <p>
-    BCA student (Final Year) specializing in backend development with Node.js ecosystem. Built and deployed 3+ production-ready applications serving 150+ active users with 99% uptime. Experienced in designing REST APIs, implementing JWT authentication, real-time systems with Socket.IO, and database optimization with MongoDB. Strong foundation in data structures and algorithms. Actively seeking backend internship to contribute to scalable production systems while gaining industry experience in fintech or real-time applications.
+    Backend developer focused on building real-time and REST-based applications
+    using Node.js, Express, and MongoDB. Hands-on experience with JWT-based
+    authentication, Socket.IO for real-time communication, modular API design,
+    and MongoDB schema modeling using Mongoose. Seeking a backend internship
+    to contribute to real-world systems and grow into a full-time backend role.
   </p>
+</section>
 
-  <!-- Skills -->
-  <h2>Technical Skills</h2>
-  <div class="skills-section">
-    <div class="skill-category">
-      <strong>Backend:</strong>
-      <span>Node.js, Express.js, REST APIs, JWT Authentication, Middleware, Socket.IO, WebSockets, EventEmitter</span>
-    </div>
-    <div class="skill-category">
-      <strong>Database:</strong>
-      <span>MongoDB, Mongoose ODM, PostgreSQL, Query Optimization, Indexing, Database Design</span>
-    </div>
-    <div class="skill-category">
-      <strong>Frontend:</strong>
-      <span>React.js, Zustand (State Management), Axios, Responsive Design</span>
-    </div>
-    <div class="skill-category">
-      <strong>Tools & DevOps:</strong>
-      <span>Git, GitHub, Postman, VS Code, Linux, Render, Docker (Basics), API Testing</span>
-    </div>
-    <div class="skill-category">
-      <strong>Core Concepts:</strong>
-      <span>MVC Architecture, Error Handling, Input Validation, Security (bcrypt, CORS), RESTful Design</span>
-    </div>
-  </div>
-
-  <!-- Projects -->
+<!-- PROJECTS -->
+<section>
   <h2>Projects</h2>
 
-  <div class="project-title">JustChat – Real-Time Chat Application</div>
-  <div class="project-meta">Node.js • Express • MongoDB • Socket.IO • JWT • React • bcrypt</div>
-  <div class="project-links">
-    <a href="https://justchat-d566.onrender.com" target="_blank">🔗 Live Demo</a>
-    <a href="https://github.com/shubhambhattacharya-dev/chatApp" target="_blank">💻 GitHub</a>
+  <div class="project">
+    <div class="project-title">JustChat – Real-Time Chat Application</div>
+    <div class="links">
+      <a href="https://justchat-d566.onrender.com" target="_blank" rel="noopener noreferrer">Live</a>
+      <a href="https://github.com/shubhambhattacharya-dev/chatApp" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+    <span class="tech">Node.js, Express, MongoDB, Socket.IO, JWT, bcrypt, React, Cloudinary</span>
+    <ul>
+      <li>Built a real-time chat system using Socket.IO for instant bi-directional messaging</li>
+      <li>Implemented JWT-based authentication with protected routes and secure password handling</li>
+      <li>Designed modular REST APIs using controller–service architecture</li>
+      <li>Structured MongoDB schemas using Mongoose for users, chats, and messages</li>
+      <li>Added features such as image uploads, typing indicators, and online/offline user status</li>
+    </ul>
   </div>
-  <ul>
-    <li>Built real-time messaging system using Socket.IO with bidirectional event handling, supporting 100+ concurrent users with 99% uptime on Render deployment.</li>
-    <li>Implemented JWT-based authentication with bcrypt password hashing (salt rounds=10), secure session management, and protected routes for authorized access control.</li>
-    <li>Designed RESTful APIs for chat room creation, real-time messaging, online user presence tracking, and profile management with proper HTTP status codes.</li>
-    <li>Optimized WebSocket connection handling reducing message latency by ~20% through efficient event listeners, connection pooling, and caching strategies.</li>
-    <li>Integrated MongoDB with Mongoose schemas featuring validation rules, indexing on userId and roomId fields for faster queries, and proper error handling.</li>
-  </ul>
 
-  <div class="project-title">GitHub Explorer – MERN Stack Application</div>
-  <div class="project-meta">Node.js • Express • MongoDB • React • GitHub REST API • OAuth • Passport.js</div>
-  <div class="project-links">
-    <a href="https://github-clone-aozk.onrender.com" target="_blank">🔗 Live Demo</a>
-    <a href="https://github.com/shubhambhattacharya-dev/github-clone" target="_blank">💻 GitHub</a>
+  <div class="project">
+    <div class="project-title">GitHub Clone – API-Driven Application</div>
+    <div class="links">
+      <a href="https://github-clone-aozk.onrender.com" target="_blank" rel="noopener noreferrer">Live</a>
+      <a href="https://github.com/shubhambhattacharya-dev/github-clone" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+    <span class="tech">Node.js, Express, MongoDB, React, GitHub REST API</span>
+    <ul>
+      <li>Developed an Express backend to fetch and serve GitHub user and repository data</li>
+      <li>Consumed GitHub REST APIs with proper error handling and response validation</li>
+      <li>Implemented basic in-memory caching to reduce repeated external API requests</li>
+      <li>Integrated frontend and backend using Axios for clean client–server communication</li>
+    </ul>
   </div>
-  <ul>
-    <li>Developed full-stack MERN application integrating GitHub REST API to fetch and display user profiles, repositories, followers, and activity feeds with real-time updates.</li>
-    <li>Built Express backend as API proxy layer handling GitHub API rate limiting (5000 requests/hour), implementing response caching to reduce external API calls by 60%.</li>
-    <li>Implemented GitHub OAuth authentication flow using Passport.js for secure user login, session management, and protected routes with token-based authorization.</li>
-    <li>Created comprehensive error handling for API failures, network issues, and rate limit scenarios with user-friendly error messages and fallback mechanisms.</li>
-    <li>Designed responsive React frontend with Zustand state management for efficient data flow and Axios for seamless frontend-backend communication.</li>
-  </ul>
+</section>
 
-  <!-- Education -->
+<!-- SKILLS -->
+<section>
+  <h2>Technical Skills</h2>
+  <p><strong>Backend:</strong> Node.js, Express.js, RESTful API Design, Socket.IO, JWT Authentication, Middleware</p>
+  <p><strong>Database:</strong> MongoDB, Mongoose ODM, Schema Design, Indexing</p>
+  <p><strong>Tools:</strong> Git, GitHub, Postman, Render, Linux (Basic)</p>
+  <p><strong>Additional:</strong> JavaScript (ES6+), React (API Integration), Java (Core), SQL, bcrypt, Cloudinary</p>
+</section>
+
+<!-- EDUCATION -->
+<section>
   <h2>Education</h2>
-  <p>
-    <strong>Bachelor of Computer Applications (BCA)</strong><br/>
-    Parul University, Vadodara | 2022 – 2025<br/>
-    Expected Graduation: May 2025 | CGPA: 8.0/10.0<br/>
-    Relevant Coursework: Data Structures & Algorithms, Database Management Systems, Web Technologies, Software Engineering
-  </p>
+  <p><strong>Bachelor of Computer Applications (BCA)</strong> — Parul University, Vadodara (2022–2025)</p>
+  <p>CGPA: 8.0 / 10</p>
+  <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, DBMS, Computer Networks, Operating Systems</p>
+</section>
 
-  <!-- Footer -->
-  <div class="footer">
-    <strong>Availability:</strong> Immediate joiner for 3–6 month Backend Internship (Node.js/Express) • Open to Remote/Hybrid • Open to full-time conversion
-  </div>
+<!-- CERTIFICATIONS -->
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li>Computer Networks and Internet Protocols – NPTEL (IIT)</li>
+    <li>Introduction to Database Systems – NPTEL (IIT)</li>
+    <li>JavaScript for Beginners – Simplilearn</li>
+  </ul>
+</section>
 
+<div class="availability">
+  Immediate joiner seeking a 3–6 month Backend Internship (Node.js / Express)
+  with intent to grow into a full-time backend role. Open to Remote, Hybrid,
+  and On-site opportunities across India.
 </div>
 
+</div>
 </body>
 </html>
